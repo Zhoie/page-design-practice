@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 
 import { useRouter } from 'next/router'
+import handler from './api/hello'
 
 
 
@@ -16,7 +17,13 @@ const styles = {
 export default function Home() {
 
   const router = useRouter()
+
+  const handlerRouterClick = () => {
+    router.push('/finance')
+  }
   return (
+
+
 
     // route  diffrerent pages here
     <div className={styles.container}>
@@ -25,7 +32,7 @@ export default function Home() {
       </h1>
       <ol className={styles.ul}>
         <li>
-          <a href="/finance">Finance</a>
+          <p className='cursor-pointer' onClick={handlerRouterClick}>Finance</p>
         </li>
 
       </ol>
