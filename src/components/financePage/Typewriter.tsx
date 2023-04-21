@@ -23,7 +23,8 @@ const Typewriter = ({ words, typeSpeed, backSpeed, delay, className }: Typewrite
                 const timer = setTimeout(() => {
                     setDisplayedText(currentString.substring(0, currentIndex - 1));
                     setCurrentIndex(currentIndex - 1);
-                }, backSpeed || 200); // Adjust the delay time to change the speed of the typewriter effect
+                 // Adjust the delay time to change the speed of the typewriter effect
+                }, backSpeed || 200); 
                 return () => clearTimeout(timer);
             } else {
                 setIsBackwards(false);
@@ -34,11 +35,12 @@ const Typewriter = ({ words, typeSpeed, backSpeed, delay, className }: Typewrite
                 const timer = setTimeout(() => {
                     setDisplayedText(currentString.substring(0, currentIndex + 1));
                     setCurrentIndex(currentIndex + 1);
-                }, typeSpeed || 100); // Adjust the delay time to change the speed of the typewriter effect
+                // Adjust the delay time to change the speed of the typewriter effect
+                }, typeSpeed || 100); 
                 return () => clearTimeout(timer);
             } else {
-                // Adjust the delay time to change the speed of the typewriter effect
 
+                // Adjust the delay time to change the speed of the typewriter effect
                 setTimeout(() => {
                     setIsBackwards(true);
                 }, delay || 500)
@@ -47,8 +49,6 @@ const Typewriter = ({ words, typeSpeed, backSpeed, delay, className }: Typewrite
     }, [currentIndex, isBackwards, words, currentStringIndex]);
 
     return (
-
-        // <input >{displayedText}</input>
         <span className={className}> {displayedText} </span>
     );
 }

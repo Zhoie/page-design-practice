@@ -23,8 +23,6 @@ export default function Home() {
   }
   return (
 
-
-
     // route  diffrerent pages here
     <div className={styles.container}>
       <h1 className={styles.title}>
