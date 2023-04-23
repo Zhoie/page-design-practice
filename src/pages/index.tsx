@@ -31,8 +31,7 @@ export default function Home() {
       <ol className={styles.ul}>
         <li>
           <p className='cursor-pointer' onClick={handlerRouterClick}>Finance</p>
-          <iframe src='./finance' title='finance' width="100%" 
-        height="200px" ></iframe>
+      
         </li>
 
       </ol>
