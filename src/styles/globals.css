@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: 'Jost', sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
 * body {
   @apply bg-zinc-950;
+  
 }
 
 
