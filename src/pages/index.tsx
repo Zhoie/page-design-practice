@@ -7,20 +7,24 @@ import Footer from '@/components/global/Footer'
 const styles = {
   container: 'flex flex-col  p-4 mx-auto items-center justify-between',
   title: 'p-2 text-4xl text-zinc-50 border-b-2 border-bg-zinc-50 font-bold',
-  ul: 'mt-2 p-4 text-xl text-zinc-50 font-bold hover:scale-110 transform transition duration-500 ease-in-out',
-  li:'border-2 border-zinc-50 p-2 rounded-xl hover:bg-zinc-50 hover:text-zinc-900 transition duration-300 ease-in-out',
+  ul: 'flex flex-row mt-2 p-4 text-xl gap-4',
+  li:'border-2 border-zinc-50 p-2 text-zinc-50 font-bold rounded-xl hover:bg-zinc-50  hover:scale-110 hover:text-zinc-900  transition duration-300 ease-in-out',
 }
 
 const websiteLinks = {
-  'finance':'/finance'
+  'finance':'/finance',
+  'docebook':'https://docebook.vercel.app/',
+  'dashboard':'/dashboard',
 }
+
 
 export default function Home() {
 
   const router = useRouter()
 
+  // route to different pages Click
   const handlerRouterClick = (link:string) => {
-    router.push('/finance')
+    router.push(link)
   }
   return (
 
@@ -35,10 +39,6 @@ export default function Home() {
             <p className='cursor-pointer' onClick={()=>handlerRouterClick(value)}>{name}</p>
           </li>
         ))}
-        {/* <li className={styles.li}>
-          <p className='cursor-pointer' onClick={handlerRouterClick}>Finance</p>
-      
-        </li> */}
 
       </ol>
       <Footer />
