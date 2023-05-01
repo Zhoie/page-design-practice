@@ -39,16 +39,16 @@ export default function Sidebar() {
     return (
         <div className={styles.container}>
 
-            <ul className={styles.ul}>
+            <div className={styles.ul}>
                 {icons.map((icon, index) => (
 
-                    <li key={`icon-${index}`} onClick={() => handleClick(index)} className={styles.li}>
+                    <div key={index} onClick={() => handleClick(index)} className={styles.li}>
                         {icon}
-                    </li>
+                    </div>
 
                 ))}
 
-            </ul>
+            </div>
         </div>
     )
 }
