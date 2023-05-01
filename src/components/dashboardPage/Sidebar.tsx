@@ -14,11 +14,28 @@ const styles = {
 
 }
 
-const icons = [<RiVipDiamondLine />,
-<CgMenuGridR />,
-<AiOutlineUser />,
-<AiOutlineShopping />,
-<AiOutlineSetting />,]
+const icons = [
+    {
+        "name": "RiVipDiamondLine",
+        "component": "<RiVipDiamondLine />"
+    },
+    {
+        "name": "CgMenuGridR",
+        "component": "<CgMenuGridR />"
+    },
+    {
+        "name": "AiOutlineUser",
+        "component": "<AiOutlineUser />"
+    },
+    {
+        "name": "AiOutlineShopping",
+        "component": "<AiOutlineShopping />"
+    },
+    {
+        "name": "AiOutlineSetting",
+        "component": "<AiOutlineSetting />"
+    }
+]
 
 export default function Sidebar() {
 
@@ -39,16 +56,14 @@ export default function Sidebar() {
     return (
         <div className={styles.container}>
 
-            <div className={styles.ul}>
+            <ul className={styles.ul}>
                 {icons.map((icon, index) => (
-
-                    <div key={index} onClick={() => handleClick(index)} className={styles.li}>
-                        {icon}
-                    </div>
+                    <li key={index} onClick={() => handleClick(index)} className={styles.li}>
+                        {icon.component}
+                    </li>
 
                 ))}
-
-            </div>
+            </ul>
         </div>
     )
 }
