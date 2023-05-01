@@ -42,14 +42,12 @@ export default function Sidebar() {
             <ul className={styles.ul}>
                 {icons.map((icon, index) => (
 
-                    <li key={index} onClick={() => handleClick(index)} className={styles.li}>
+                    <li key={`icon-${index}`} onClick={() => handleClick(index)} className={styles.li}>
                         {icon}
                     </li>
 
                 ))}
-                {/* <li className={`${styles.li} ${styles.expandBtn}`}>
-                    <BsArrowRightSquare />
-                </li> */}
+
             </ul>
         </div>
     )
