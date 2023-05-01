@@ -17,23 +17,23 @@ const styles = {
 const icons = [
     {
         "name": "RiVipDiamondLine",
-        "component": "<RiVipDiamondLine />"
+        "component": <RiVipDiamondLine />
     },
     {
         "name": "CgMenuGridR",
-        "component": "<CgMenuGridR />"
+        "component": <CgMenuGridR />
     },
     {
         "name": "AiOutlineUser",
-        "component": "<AiOutlineUser />"
+        "component": <AiOutlineUser />
     },
     {
         "name": "AiOutlineShopping",
-        "component": "<AiOutlineShopping />"
+        "component": <AiOutlineShopping />
     },
     {
         "name": "AiOutlineSetting",
-        "component": "<AiOutlineSetting />"
+        "component": <AiOutlineSetting />
     }
 ]
 
