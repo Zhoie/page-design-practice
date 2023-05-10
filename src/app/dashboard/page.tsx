@@ -1,11 +1,9 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import Sidebar from './components/Sidebar'
 import Cards from './components/Cards'
 import Chart from './components/Chart'
 import Orders from './components/Orders'
-
-
 
 const styles = {
     container: 'bg-zinc-200 w-screen flex flex-row gap-4',
@@ -13,7 +11,7 @@ const styles = {
 
 export default function dashboard() {
 
-    const [selectedId, setSelectedId] = useState(null)
+    // const [selectedId, setSelectedId] = useState(null)
     return (
 
         <div className={styles.container}>
