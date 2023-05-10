@@ -13,12 +13,11 @@ export default function dashboard() {
 
     // const [selectedId, setSelectedId] = useState(null)
     return (
-
         <div className={styles.container}>
             <Sidebar />
             <div className='flex flex-col w-full mt-20'>
                 <Cards />
-                <div className='flex flex-col gap-4 sm:flex-row'>
+                <div className='flex flex-col gap-4 sm:mx-auto sm:flex-row'>
                     <Chart />
                     <Orders />
                 </div>
@@ -26,6 +25,11 @@ export default function dashboard() {
             </div>
 
         </div>
+
+        // <div className={styles.container}>
+        //     <Sidebar />
+        //     <Cards />
+        // </div>
     )
 }
 

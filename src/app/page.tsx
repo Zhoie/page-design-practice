@@ -1,18 +1,17 @@
 'use client'
 import { useRouter } from 'next/navigation'
 import Footer from '@/components/Footer'
-import Link from 'next/link'
 
 const styles = {
   container: 'flex flex-col  p-4 mx-auto items-center justify-between',
   title: 'p-2 text-4xl text-zinc-50 border-b-2 border-bg-zinc-50 font-bold',
   ul: 'flex flex-row mt-2 p-4 text-xl gap-4',
-  li:'border-2 border-zinc-50 p-2 text-zinc-50 font-bold rounded-xl hover:bg-zinc-50  hover:scale-110 hover:text-zinc-900  transition duration-300 ease-in-out',
+  li:'border-2 border-zinc-50 p-2 text-zinc-50 font-bold rounded-xl hover:bg-zinc-50  hover:text-zinc-900  transition duration-300 ease-in-out',
 }
 
 const websiteLinks = {
-  'finance':'/finance',
-  'docebook':'https://docebook.vercel.app/',
+  'Finance':'/finance',
+  'Docebook':'https://docebook.vercel.app/',
   'dashboard':'/dashboard',
   'Framer':'/framer',
 }

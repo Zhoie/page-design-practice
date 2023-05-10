@@ -16,7 +16,7 @@ interface ChartData {
 }
 
 const styles = {
-    container: 'flex mx-4 sm:w-[50vw] h-[50vh]  items-center justify-center bg-white p-4 rounded-lg shadow-lg',
+    container: 'flex mx-4 sm:w-[50vw] h-[50vh] items-center justify-center bg-white p-4 rounded-lg shadow-lg',
     chart: 'w-full h-full',
 }
 
@@ -72,3 +72,4 @@ export default function Chart() {
         </div>
     )
 }
+
