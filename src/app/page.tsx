@@ -12,8 +12,10 @@ const styles = {
 const websiteLinks = {
   'Finance':'/finance',
   'Docebook':'https://docebook.vercel.app/',
-  'dashboard':'/dashboard',
+  'Dashboard':'/dashboard',
   'Framer':'/framer',
+  'Weather':'https://weather.zhoie.com',
+
 }
 
 export default function Home() {
