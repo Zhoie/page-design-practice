@@ -7,7 +7,7 @@ const styles = {
   container: ' flex flex-col h-screen ',
   title: 'text-center p-2 text-4xl text-zinc-50 border-b-2 border-bg-zinc-50 font-bold',
   ul: 'flex flex-col sm:flex-row sm:mx-auto mx-4 my-4 gap-2',
-  li:'text-center border-2 border-zinc-50 p-2 text-zinc-50 font-bold rounded-xl hover:bg-zinc-50  hover:text-zinc-900  transition duration-300 ease-in-out',
+  li:'py-2 px-6 text-center border-2 border-zinc-50 p-2 text-zinc-50 font-bold rounded-xl hover:bg-zinc-50  hover:text-zinc-900  transition duration-300 ease-in-out',
 }
 
 const websiteLinks = {
