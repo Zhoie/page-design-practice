@@ -10,7 +10,6 @@ const images = {
     }
 }
 
-
 const styles = {
     container: ' flex flex-col bg-white py-16 px-4',
     mainContainer: 'flex flex-col sm:flex-row bg-white py-16 px-4',

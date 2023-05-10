@@ -1,8 +1,7 @@
-
-
-
-import { useRouter } from 'next/router'
-import Footer from '@/components/global/Footer'
+'use client'
+import { useRouter } from 'next/navigation'
+import Footer from '@/components/Footer'
+import Link from 'next/link'
 
 const styles = {
   container: 'flex flex-col  p-4 mx-auto items-center justify-between',
@@ -15,8 +14,8 @@ const websiteLinks = {
   'finance':'/finance',
   'docebook':'https://docebook.vercel.app/',
   'dashboard':'/dashboard',
+  'Framer':'/framer',
 }
-
 
 export default function Home() {
 

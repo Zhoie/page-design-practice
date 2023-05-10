@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+
 const styles = {
     container: 'flex flex-col w-full mx-auto gap-2 p-4',
     card: 'flex flex-row gap-4 p-4 bg-white items-center justify-between rounded-lg shadow-lg',

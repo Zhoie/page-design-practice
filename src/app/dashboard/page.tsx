@@ -1,20 +1,24 @@
-import React from 'react'
-import Sidebar from '@/components/dashboardPage/Sidebar'
-import Cards from '@/components/dashboardPage/Cards'
-import Chart from '@/components/dashboardPage/Chart'
-import Orders from '@/components/dashboardPage/Orders'
+'use client'
+import React, { useState } from 'react'
+import Sidebar from './components/Sidebar'
+import Cards from './components/Cards'
+import Chart from './components/Chart'
+import Orders from './components/Orders'
 
 
 
 const styles = {
-    container: 'bg-zinc-200 flex flex-row gap-4',
+    container: 'bg-zinc-200 w-screen flex flex-row gap-4',
 }
 
 export default function dashboard() {
+
+    const [selectedId, setSelectedId] = useState(null)
     return (
+
         <div className={styles.container}>
             <Sidebar />
-            <div className='flex flex-col w-full'>
+            <div className='flex flex-col w-full mt-20'>
                 <Cards />
                 <div className='flex flex-col gap-4 sm:flex-row'>
                     <Chart />
