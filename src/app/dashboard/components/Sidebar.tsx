@@ -7,7 +7,7 @@ import { CgMenuGridR } from 'react-icons/cg'
 import { RiVipDiamondLine } from 'react-icons/ri'
 
 const styles = {
-    container: "fixed top-0 inset-x-0 h-20 bg-white",
+    container: "fixed top-0 inset-x-0 h-20 bg-white bg-opacity-80 backdrop-blur-sm",
     rowContainer:'',
     ul: 'flex flex-row text-3xl p-4  gap-4 items-center justify-end',
     li: 'p-2 first:border-b-2 border-black hover:bg-neutral-200 hover:rounded-xl hover:border-transparent hover:scale-110 transform transition-all duration-300 ease-in-out',

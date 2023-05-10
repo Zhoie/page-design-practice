@@ -1,12 +1,13 @@
 'use client'
+// import styles from './home.module.css'
 import { useRouter } from 'next/navigation'
 import Footer from '@/components/Footer'
 
 const styles = {
-  container: 'flex flex-col  p-4 mx-auto items-center justify-between',
-  title: 'p-2 text-4xl text-zinc-50 border-b-2 border-bg-zinc-50 font-bold',
-  ul: 'flex flex-row mt-2 p-4 text-xl gap-4',
-  li:'border-2 border-zinc-50 p-2 text-zinc-50 font-bold rounded-xl hover:bg-zinc-50  hover:text-zinc-900  transition duration-300 ease-in-out',
+  container: ' flex flex-col h-screen ',
+  title: 'text-center p-2 text-4xl text-zinc-50 border-b-2 border-bg-zinc-50 font-bold',
+  ul: 'flex flex-col sm:flex-row sm:mx-auto mx-4 my-4 gap-2',
+  li:'text-center border-2 border-zinc-50 p-2 text-zinc-50 font-bold rounded-xl hover:bg-zinc-50  hover:text-zinc-900  transition duration-300 ease-in-out',
 }
 
 const websiteLinks = {
@@ -33,14 +34,14 @@ export default function Home() {
       <h1 className={styles.title}>
         Websites practice
       </h1>
-      <ol className={styles.ul}>
+      <ul className={styles.ul}>
         {Object.entries(websiteLinks).map(([name, value], index) => (
           <li className={styles.li} key={index}>
             <p className='cursor-pointer' onClick={()=>handlerRouterClick(value)}>{name}</p>
           </li>
         ))}
 
-      </ol>
+      </ul>
       <Footer />
 
     </div>
