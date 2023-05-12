@@ -1,12 +1,12 @@
-'use client'
 import React from 'react'
 import Navbar from './components/Navbar'
+import Block from './components/Block'
 
 export default function Framer() {
   return (
     <div>
-      {/* <p className='text-white'>Framer</p> */}
       <Navbar />
+      <Block />
     </div>
   )
 }

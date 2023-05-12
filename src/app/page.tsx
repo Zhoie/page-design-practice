@@ -16,6 +16,7 @@ const websiteLinks = {
   'Dashboard':'/dashboard',
   'Framer':'/framer',
   'Weather':'https://weather.zhoie.com',
+  'NASA':'/nasa',
 
 }
 
