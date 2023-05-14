@@ -6,7 +6,14 @@ import Block from './components/Block'
 import { motion } from 'framer-motion'
 
 export default function Framer() {
-  
+
+
+  const handleClick = () => {
+    const url = 'https://www.google.com'
+    window.open(url, '_blank')
+    // window.open('')
+  }
+
   return (
     <div className='flex flex-col'>
       <Navbar />
@@ -14,7 +21,7 @@ export default function Framer() {
         {/* <motion.div variants={animations} initial='hidden' animate={'show'} whileHover={'hover'}> */}
         <motion.div >
 
-          <Block text='hello' />
+          <Block onClick={handleClick} text='hello google' />
 
         </motion.div>
       </div>
