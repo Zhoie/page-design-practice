@@ -1,5 +1,6 @@
 .navbar {
     @apply flex justify-center items-center;
     @apply h-16;
-    @apply bg-gray-900 text-white ;
+    @apply text-black ;
+    @apply hover:text-white hover:duration-500;
   }
