@@ -24,3 +24,8 @@ body {
   }
 }
 
+@property --random-color {
+  syntax: '<color>';
+  initial-value: black;
+  inherits: false;
+}

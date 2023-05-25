@@ -1,11 +1,12 @@
 import './framer.css'
 
-export const metadata = {
-    title: 'NASA',
+// export const metadata = {
+//     title: 'NASA',
 
-}
+// }
 
 export default function FramerLayout({ children }: { children: React.ReactNode }) {
+
 
     return (
         <html lang="en" >
