@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
+// abutton with a shimmer effect
 
 
 export default function Block({ text, onClick }: { text?: string, onClick?: () => void }) {
