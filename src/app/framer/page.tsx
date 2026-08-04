@@ -1,7 +1,7 @@
 'use client'
 
 import React, { use } from 'react'
-import { useRef, useState, RefObject, useEffect } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Block from './components/Block'
@@ -10,7 +10,7 @@ import PictureFrame from './components/PictureFrame'
 
 export default function Framer() {
 
-  const myRef: RefObject<HTMLParagraphElement> = useRef(null)
+  const myRef = useRef<HTMLParagraphElement>(null)
 
   const handleClick = () => {
     const url = 'https://www.google.com'

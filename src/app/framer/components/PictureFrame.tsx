@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { BsArrowLeftSquare, BsArrowRightSquare } from 'react-icons/bs'
@@ -7,8 +7,6 @@ import { BsArrowLeftSquare, BsArrowRightSquare } from 'react-icons/bs'
 export default function PictureFrame() {
 
     const [x, setX] = React.useState(0)
-    const [leftBtnSelectable, setLeftBtnSelectable] = React.useState(false)
-    const [rightBtnSelectable, setRightBtnSelectable] = React.useState(true)
     const [currentImage, setCurrentImage] = React.useState(0)
 
     const images = [
@@ -20,17 +18,8 @@ export default function PictureFrame() {
 
     ]
 
-    useEffect(() => {
-        if (currentImage === 0) {
-            setLeftBtnSelectable(false)
-        } else if (currentImage === images.length - 1) {
-            setRightBtnSelectable(false)
-        } else {
-            setLeftBtnSelectable(true)
-            setRightBtnSelectable(true)
-        }
-
-    })
+    const leftBtnSelectable = currentImage > 0
+    const rightBtnSelectable = currentImage < images.length - 1
 
     const handleClick = (buttonTag: string) => {
 

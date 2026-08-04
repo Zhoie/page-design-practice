@@ -1,4 +1,6 @@
-export const animations = {
+import type { Variants } from 'framer-motion'
+
+export const animations: Variants = {
     initial: {
       opacity: 0,
     //   x: 300,
@@ -6,7 +8,6 @@ export const animations = {
   
     show: {
       opacity: 1,
-      duration: 2,
     //   x: 300,
       borderRadius: 8,
       background: "linear-gradient(to right, #FFFFFF, #FBFFFF)",

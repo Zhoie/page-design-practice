@@ -17,36 +17,35 @@ const Typewriter = ({ words, typeSpeed, backSpeed, delay, className }: Typewrite
     useEffect(() => {
         const currentString = words[currentStringIndex];
         const stringLength = currentString ? currentString.length : 0;
+        let timer: ReturnType<typeof setTimeout> | undefined;
 
         if (isBackwards) {
             if (currentIndex > 0) {
-                const timer = setTimeout(() => {
+                timer = setTimeout(() => {
                     setDisplayedText(currentString.substring(0, currentIndex - 1));
                     setCurrentIndex(currentIndex - 1);
-                 // Adjust the delay time to change the speed of the typewriter effect
-                }, backSpeed || 200); 
-                return () => clearTimeout(timer);
+                }, backSpeed || 200);
             } else {
-                setIsBackwards(false);
-                setCurrentStringIndex((currentStringIndex + 1) % words.length);
+                timer = setTimeout(() => {
+                    setIsBackwards(false);
+                    setCurrentStringIndex((currentStringIndex + 1) % words.length);
+                }, 0);
             }
+        } else if (currentIndex < stringLength) {
+            timer = setTimeout(() => {
+                setDisplayedText(currentString.substring(0, currentIndex + 1));
+                setCurrentIndex(currentIndex + 1);
+            }, typeSpeed || 100);
         } else {
-            if (currentIndex < stringLength) {
-                const timer = setTimeout(() => {
-                    setDisplayedText(currentString.substring(0, currentIndex + 1));
-                    setCurrentIndex(currentIndex + 1);
-                // Adjust the delay time to change the speed of the typewriter effect
-                }, typeSpeed || 100); 
-                return () => clearTimeout(timer);
-            } else {
-
-                // Adjust the delay time to change the speed of the typewriter effect
-                setTimeout(() => {
-                    setIsBackwards(true);
-                }, delay || 500)
-            }
+            timer = setTimeout(() => {
+                setIsBackwards(true);
+            }, delay || 500);
         }
-    }, [currentIndex, isBackwards, words, currentStringIndex]);
+
+        return () => {
+            if (timer) clearTimeout(timer);
+        };
+    }, [backSpeed, currentIndex, currentStringIndex, delay, isBackwards, typeSpeed, words]);
 
     return (
         <span className={className}> {displayedText} </span>
@@ -55,7 +54,6 @@ const Typewriter = ({ words, typeSpeed, backSpeed, delay, className }: Typewrite
 
 
 export default Typewriter;
-
 
 
 
